@@ -6,9 +6,8 @@
 	background-image: url("resources/maxres.png");
 	background-size: cover;
 	display: block;
-	filter: blur(5px);
-	-webkit-filter: blur(5px);
-	height: 100%;
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -18,32 +17,24 @@
 }
 
 .content {
-	width: 100%;
 	font-family: sans-serif;
 	text-align: center;
-	position: fixed;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	position: relative;
+	top: -8px;
 	left: 0;
 	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: 0 20px;
-	z-index: 1;
-	padding: 0 10px;
+	z-index: 2;
+	margin: 0 64px;
+	text-decoration: none;
 }
 
 .content-header {
-	background-color: orangered;
-	width: 25%;
-	margin: 0 auto;
+	font-size: 32px;
 }
 
 .content-body {
-	background-color: antiquewhite;
-	width: 25%;
-	height: 10%;
-	margin: -20px auto;
-}
-
-p {
-	font-size: 20px
+	font-size: 18px;
 }
