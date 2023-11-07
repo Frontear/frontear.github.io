@@ -1,7 +1,5 @@
-# <https://frontear.github.io>
-
-A simple website, that currently serves no purpose other than for me to creatively throw whatever I can at it.
+# frontear.github.io
+A website that is intended to demonstrate my portfolio. A work in progress.
 
 ## License
-
-This project has no license. You may freely use whatever you wish from here with absolutely no obligations. This may change if I choose to add personalized stuff.
+All code in this repo is subject to the GNU General Public License v3.0. Please be mindful of this when forking, download, and redistributing.

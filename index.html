@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>Frontear (Ali Rizvi)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Ali Rizvi (Frontear)</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p style="align-self: center">Hello, welcome to my barebones website.</p>
+    <div class="navbar">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <p class="title is-2">FRONTEAR</p>
+            </div>
+            <button class="navbar-burger" id="nav-burger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="navbar-menu" id="nav-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="./pages/about_me.html">About Me</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Social Links</a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="https://github.com/Frontear">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script type="text/javascript" src="script.js"></script>
+    <div class="section">
+        <p class="title is-0 has-text-centered">Under Construction</p>
+        <progress class="progress" value="2" max="100">2%</progress>
+    </div>
+
+    <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
