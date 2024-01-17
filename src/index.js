@@ -1,9 +1,6 @@
 const express = require("express");
-const path = require("path");
 const app = express();
-const port = 3000;
-
-const rootRouter = require("./routes/root");
+const port = process.env.PORT || 3000;
 
 // middleware
 app.use((req, res, next) => {
@@ -14,9 +11,15 @@ app.use((req, res, next) => {
 });
 
 // routes
-app.use("/", rootRouter);
+app.use(require("./routes"));
 
 // entrypoint
-app.listen(port, () => {
+app.listen(port, async () => {
+    const db = require("./db").authenticate();
+
     console.log(`Hosting on https://127.0.0.1:${port}/`);
+
+    await db;
+
+    console.log("Connected to database!");
 });
