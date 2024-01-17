@@ -3,12 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // middleware
-app.use((req, res, next) => {
-    res.html = file => {
-        res.sendFile(`./public/${file}`, { root: __dirname });
-    };
-    next();
-});
+app.use(express.static(require("path").join(__dirname, "public")));
 
 // routes
 app.use(require("./routes"));
