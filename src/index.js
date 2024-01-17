@@ -5,11 +5,18 @@ const port = 3000;
 
 const rootRouter = require("./routes/root");
 
-// TODO: why does express.static("public"); not work, but this does?
-app.use(express.static(path.join(__dirname, "public")));
+// middleware
+app.use((req, res, next) => {
+    res.html = file => {
+        res.sendFile(`./public/${file}`, { root: __dirname });
+    };
+    next();
+});
 
+// routes
 app.use("/", rootRouter);
 
+// entrypoint
 app.listen(port, () => {
     console.log(`Hosting on https://127.0.0.1:${port}/`);
 });
