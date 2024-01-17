@@ -1,0 +1,29 @@
+{
+  "name": "frontear.github.io",
+  "version": "1.0.0",
+  "description": "My portfolio.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frontear/frontear.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "expressjs",
+    "bulma",
+    "html5"
+  ],
+  "author": "Frontear",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Frontear/frontear.github.io/issues"
+  },
+  "homepage": "https://github.com/Frontear/frontear.github.io#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
