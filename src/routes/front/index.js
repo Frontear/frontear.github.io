@@ -2,7 +2,8 @@ const express = require("express");
 
 const router = express.Router();
 
-router.use("/", require("./front"));
-router.use("/api", require("./back"));
+router.get("/", (req, res) => {
+    res.render("index.html");
+});
 
 module.exports = router;

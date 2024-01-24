@@ -2,7 +2,8 @@ const express = require("express");
 
 const router = express.Router();
 
-router.use("/", require("./front"));
-router.use("/api", require("./back"));
+router.post("/", (req, res) => {
+    res.send("POST successful");
+});
 
 module.exports = router;
