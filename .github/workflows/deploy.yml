@@ -1,15 +1,14 @@
-name: Deploy HTML
+name: Deploy Website
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-
+      - staging
   pull_request:
     branches:
-      - main
-
-  workflow_dispatch:
+      - staging
 
 permissions:
   contents: read
@@ -22,21 +21,33 @@ concurrency:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Free Disk Space
+        uses: jlumbroso/free-disk-space@v1.3.1
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
+      - name: Build Website
+        run:
+          nix build .#default
+
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './src'
+          path: './result'
 
-      - name: Deploy
+      - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@v4

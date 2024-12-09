@@ -1,2 +1,2 @@
-# https://frontear.dev
-My front-facing website hosted thanks to [GitHub Pages](https://pages.github.com)!
+# frontear.dev
+My personal website powered by [Astro](https://astro.build) and [Tailwind](https://tailwindcss.com)!
