@@ -1,0 +1,18 @@
+---
+import Default from "../../layouts/Default.astro";
+
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+---
+
+<Default>
+  <h1 class="text-2xl underline pb-1.5">Blog Posts</h1>
+  <ul class="list-inside list-decimal">
+    {
+      allPosts.map((post) => (
+        <li><a href=`/blog/${post.id}`>{post.data.title}</a></li>
+      ))
+    }
+  </ul>
+</Default>
